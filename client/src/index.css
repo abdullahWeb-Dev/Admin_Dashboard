@@ -1,0 +1,25 @@
+html, body, #root, .app {
+    height: 100%;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #9a948d;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1a130f;
+  }
+  
+  /* Handle on Hover */
+  ::-webkit-scrollbar-track:hover {
+    background: #787067;
+  }
