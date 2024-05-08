@@ -42,6 +42,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
+export default app;
+
 /**
  * *ROUTES
  */
