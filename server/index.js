@@ -42,11 +42,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-export default app;
-
 /**
  * *ROUTES
  */
+app.get("/", (req, res) => {
+  res.send("Api is running");
+});
 
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
