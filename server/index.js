@@ -1,3 +1,5 @@
+import { getProducts } from "./controller/client.js";
+
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
@@ -53,6 +55,7 @@ app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
+app.get("/products", getProducts);
 
 /**
  * * MONGOOSE SETUP
