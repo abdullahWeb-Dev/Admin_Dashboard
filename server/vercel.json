@@ -1,9 +1,17 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "index.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-      { "src": "(/.*)", "dest": "index.js" }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    { "src": "index.js", "use": "@vercel/node" },
+    { "src": "routes/client.js", "use": "@vercel/node" },
+    { "src": "routes/general.js", "use": "@vercel/node" },
+    { "src": "routes/management.js", "use": "@vercel/node" },
+    { "src": "routes/sales.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/client/(.*)", "dest": "routes/client.js" },
+    { "src": "/api/general/(.*)", "dest": "routes/general.js" },
+    { "src": "/api/management/(.*)", "dest": "routes/management.js" },
+    { "src": "/api/sales/(.*)", "dest": "routes/sales.js" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
