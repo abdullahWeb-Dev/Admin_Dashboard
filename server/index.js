@@ -76,3 +76,5 @@ mongoose
     // OverallStat.insertMany(dataOverallStat);
   })
   .catch((error) => console.log(error));
+
+export default app;
